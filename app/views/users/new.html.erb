@@ -5,16 +5,26 @@
 <h1>Creat a Magic Cat!</h1>
 <% if @user.errors %>
   <% @user.errors.full_messages.each do |error| %>
-    <h3 class="red"><%= error%></h3>
+    <h3 class="red">El <%= error %></h3>
   <% end %>
 <% end %>
+
+
+
 <%= form_for @user, url: users_path, method: "post" do |f| %>
-  First name: <%= f.text_field :name %><br />
+  <div>
+    <%= f.text_field :name, placeholder: "name" %>
+  </div>
+  <div>
+    <%= f.text_field :color, placeholder: "color" %>
+  </div>
+
   <%= f.submit %>
 <% end %>
 
 <!-- The same form built using form_tag -->
-<%= form_tag users_path, method: "post" do %>
+<!-- <%= form_tag users_path, method: "post" do %>
   First name: <%= text_field :user, :name %><br />
+  Color: <%= text_field :user, :color %><br />
   <%= submit_tag("Crear Gato") %>
 <% end %>

@@ -2,10 +2,13 @@ es:
   activerecord:
     attributes:
       user:
-        name: Nombre
+        name: nombre
+        color: color
     errors:
       models:
         user:
           attributes:
             name:
+              blank: "no puede estar vacío."
+            color:
               blank: "no puede estar vacío."

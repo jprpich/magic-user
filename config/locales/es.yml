@@ -1,0 +1,11 @@
+es:
+  activerecord:
+    attributes:
+      user:
+        name: Nombre
+    errors:
+      models:
+        user:
+          attributes:
+            name:
+              blank: "no puede estar vacío."

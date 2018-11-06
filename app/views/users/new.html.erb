@@ -1,15 +1,13 @@
-<% if @test %>
+<!-- <% if @test %>
   <p><%= @test %></p>
-<% end %>
+<% end %> -->
 
-<h1>Creat a Magic Cat!</h1>
+<h1>Crear un Magic User!</h1>
 <% if @user.errors %>
   <% @user.errors.full_messages.each do |error| %>
     <h3 class="red">El <%= error %></h3>
   <% end %>
 <% end %>
-
-
 
 <%= form_for @user, url: users_path, method: "post" do |f| %>
   <div>
@@ -18,7 +16,6 @@
   <div>
     <%= f.text_field :color, placeholder: "color" %>
   </div>
-
   <%= f.submit %>
 <% end %>
 
